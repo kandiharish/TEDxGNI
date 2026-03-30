@@ -1,0 +1,194 @@
+.past-seasons-section {
+  padding: 4rem 2rem 6rem;
+  background-color: transparent;
+}
+
+.season-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.season-row.row-reverse {
+  direction: rtl;
+}
+
+.season-row.row-reverse > * {
+  direction: ltr; /* Reset text direction inside children */
+}
+
+/* Text Content Area */
+.season-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.season-badge {
+  color: var(--color-ted-red);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.season-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.season-desc {
+  color: #c0c0c0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.featured-speakers-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.speaker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.speaker-list li {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.red-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-ted-red);
+  border-radius: 50%;
+  margin-top: 8px; /* Alignment with text */
+  flex-shrink: 0;
+}
+
+/* Action Buttons */
+.season-actions {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.watch-btn {
+  gap: 0.5rem;
+}
+
+.play-icon {
+  margin-right: 2px;
+}
+
+/* Media/Image Area */
+.season-media {
+  width: 100%;
+}
+
+.season-image-card {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(230, 43, 30, 0.3);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(230, 43, 30, 0.2), 
+    -15px 15px 45px rgba(230, 43, 30, 0.3);
+}
+
+.season-row.row-reverse .season-image-card {
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(230, 43, 30, 0.2), 
+    15px 15px 45px rgba(230, 43, 30, 0.3);
+}
+
+/* Event Photos Backgrounds */
+.bg-season-3 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('/uncovered%20origins%202024.png'); }
+.bg-season-2 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('/shadowed%20future%202023.jpg'); }
+.bg-season-1 { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('/road%20not%20taken%202019.webp'); }
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 2rem 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-season {
+  color: var(--color-ted-red);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.overlay-title {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.overlay-theme {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* Looking Forward Block */
+.looking-forward {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.looking-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.looking-desc {
+  color: #a0a0a0;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .season-row {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .season-row.row-reverse {
+    direction: ltr; /* Reset to normal flow on mobile */
+  }
+  
+  .season-media {
+    order: -1; /* Image always on top on mobile */
+  }
+}

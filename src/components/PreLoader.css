@@ -1,0 +1,100 @@
+/* ─── Pre-Loader Overlay ─────────────────────── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ─── Letter Row ─────────────────────────────── */
+.preloader-letters {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+
+.preloader-letter {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0);
+  line-height: 1;
+  transition: none;
+  position: relative;
+}
+
+.preloader-letter.lit {
+  color: #ffffff;
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.4),
+    0 0 80px rgba(255, 255, 255, 0.2);
+}
+
+/* TED and x are all red */
+.preloader-letter.is-ted {
+  color: rgba(230, 43, 30, 0);
+}
+
+.preloader-letter.is-ted.lit {
+  color: #e62b1e;
+  text-shadow:
+    0 0 20px rgba(230, 43, 30, 0.8),
+    0 0 40px rgba(230, 43, 30, 0.5),
+    0 0 80px rgba(230, 43, 30, 0.3);
+}
+
+.preloader-letter.is-x {
+  color: rgba(230, 43, 30, 0);
+}
+
+.preloader-letter.is-x.lit {
+  color: #e62b1e;
+  text-shadow:
+    0 0 20px rgba(230, 43, 30, 0.8),
+    0 0 40px rgba(230, 43, 30, 0.5),
+    0 0 80px rgba(230, 43, 30, 0.3);
+}
+
+/* ─── Spotlight Beam ─────────────────────────── */
+.spotlight-beam {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    transparent 70%
+  );
+  filter: blur(20px);
+}
+
+/* ─── Red Flash Overlay ──────────────────────── */
+.red-flash {
+  position: absolute;
+  inset: 0;
+  background: #e62b1e;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ─── Responsive ─────────────────────────────── */
+@media (max-width: 600px) {
+  .preloader-letter {
+    font-size: clamp(3rem, 10vw, 5rem);
+  }
+  .spotlight-beam {
+    width: 60px;
+  }
+}

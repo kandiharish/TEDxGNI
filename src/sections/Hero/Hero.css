@@ -1,0 +1,315 @@
+/* ─── Layout ──────────────────────────────────── */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 80px 2rem 2rem;
+  background-image:
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.8)),
+    url('/speaker-big-stage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ─── Stage glow backdrop ─────────────────────── */
+.stage-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse at center,
+      rgba(230, 43, 30, 0.25) 0%,
+      rgba(180, 20, 10, 0.1) 40%,
+      transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(30px);
+}
+
+/* ─── Diagonal arrow particles ────────────────── */
+.arrow-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.arrow-particle {
+  position: absolute;
+  font-weight: 300;
+  line-height: 1;
+  will-change: transform, opacity;
+  display: inline-block;
+}
+
+.arrow-red {
+  color: #e62b1e;
+  filter: drop-shadow(0 0 12px rgba(230, 43, 30, 0.9));
+}
+
+.arrow-white {
+  color: rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+/* ─── Hero text container ─────────────────────── */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  width: 100%;
+}
+
+.hero-text-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 380px;
+  justify-content: center;
+}
+
+/* ─── Hero lines ──────────────────────────────── */
+.hero-line {
+  line-height: 1.1;
+}
+
+/* ─── Glitch Engine ───────────────────────────── */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-3px, 3px);
+  }
+
+  40% {
+    transform: translate(-3px, -3px);
+  }
+
+  60% {
+    transform: translate(3px, 3px);
+  }
+
+  80% {
+    transform: translate(3px, -3px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(50% 0 30% 0);
+  }
+
+  20% {
+    clip-path: inset(20% 0 60% 0);
+  }
+
+  40% {
+    clip-path: inset(80% 0 10% 0);
+  }
+
+  60% {
+    clip-path: inset(40% 0 40% 0);
+  }
+
+  80% {
+    clip-path: inset(10% 0 70% 0);
+  }
+
+  100% {
+    clip-path: inset(50% 0 30% 0);
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    text-shadow: 0 0 10px rgba(230, 43, 30, 0);
+    opacity: 0.8;
+  }
+
+  50% {
+    text-shadow: 0 0 50px rgba(230, 43, 30, 1), 0 0 100px rgba(230, 43, 30, 0.4);
+    opacity: 1;
+  }
+
+  100% {
+    text-shadow: 0 0 10px rgba(230, 43, 30, 0);
+    opacity: 0.8;
+  }
+}
+
+.glitch-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.shatter-char {
+  display: inline-block;
+  position: relative;
+  white-space: pre;
+  will-change: transform, opacity;
+}
+
+.shatter-char.glitch-text {
+  animation: glitch 0.3s infinite;
+}
+
+.shatter-char.glitch-text::before,
+.shatter-char.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.shatter-char.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip-path: inset(45% 0 44% 0);
+  animation: glitch-anim-2 5s infinite linear alternate-reverse;
+}
+
+.shatter-char.glitch-text::after {
+  left: -1px;
+  text-shadow: -1px 0 #00fff9;
+  clip-path: inset(10% 0 80% 0);
+  animation: glitch-anim-2 1s infinite linear alternate-reverse;
+}
+
+/* ─── Clarity Reveal & Shine ─────────────────── */
+.clarity-reveal {
+  position: relative;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-align: center;
+  z-index: 5;
+}
+
+.redefine-highlight {
+  position: relative;
+  color: var(--color-ted-red);
+  display: inline-block;
+  background: linear-gradient(
+    90deg, 
+    var(--color-ted-red) 0%, 
+    #ff6b6b 40%, 
+    #ffffff 50%, 
+    #ff6b6b 60%, 
+    var(--color-ted-red) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine-sweep 3s linear infinite;
+}
+
+@keyframes shine-sweep {
+  to { background-position: 200% center; }
+}
+
+.redefine-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--color-ted-red);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+  box-shadow: 0 0 15px rgba(230, 43, 30, 0.8);
+}
+
+.clarity-reveal.active .redefine-highlight::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ─── Aura Glow Backdrop ─────────────────────── */
+.aura-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(
+    circle at center,
+    rgba(230, 43, 30, 0.4) 0%,
+    rgba(230, 43, 30, 0.1) 40%,
+    transparent 75%
+  );
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* ─── CTA Buttons ─────────────────────────────── */
+.hero-cta-spaced {
+  display: flex;
+  gap: 2.5rem;
+  /* Increased gap between buttons */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta-hero {
+  padding: 1rem 3rem;
+  /* Wider buttons without icons */
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Shared ──────────────────────────────────── */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-text-container {
+    gap: 1rem;
+    min-height: 320px;
+  }
+
+  .hero-cta-spaced {
+    gap: 1.5rem;
+  }
+
+  .btn-cta-hero {
+    width: 100%;
+  }
+}

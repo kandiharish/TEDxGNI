@@ -1,0 +1,120 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+}
+
+.brand-logo .ted {
+  font-weight: 900;
+  color: var(--color-ted-red);
+  filter: drop-shadow(0 0 10px rgba(230, 43, 30, 0.4));
+}
+
+.brand-logo .x {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-ted-red);
+  vertical-align: super;
+  position: relative;
+  top: -0.6rem;
+  margin: 0 1px;
+}
+
+.brand-logo .gni {
+  font-weight: 400;
+  color: #ffffff;
+  margin-left: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-disabled {
+  background: #3b3f46;
+  color: #a0a5ad;
+  border: 1px solid #484c55;
+  cursor: not-allowed;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.nav-links a:not(.nav-btn) {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:not(.nav-btn):hover {
+  color: var(--color-ted-red);
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--color-bg);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+}

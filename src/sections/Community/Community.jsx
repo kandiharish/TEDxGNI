@@ -1,0 +1,50 @@
+import React from 'react';
+import { Mail, ArrowRight } from 'lucide-react';
+import './Community.css';
+
+const Community = () => {
+  return (
+    <section className="community-section" id="community">
+      <div className="wrapper community-wrapper">
+        <div className="community-header">
+          <h2 className="community-title">
+            Join Our <span className="red-accent">Community</span>
+          </h2>
+          <p className="community-subtitle">
+            Connect with us on social media to stay updated with the latest news, speaker announcements, and join the conversation.
+          </p>
+        </div>
+
+        <div className="community-card">
+          <div className="community-social-buttons">
+            <a 
+              href="https://www.instagram.com/tedxgni/?hl=en" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-primary social-btn instagram-btn"
+            >
+              Follow on Instagram
+            </a>
+            <a 
+              href="https://www.linkedin.com/groups/18951001/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-outline social-btn linkedin-btn"
+            >
+              Join LinkedIn Group
+            </a>
+          </div>
+
+          <div className="action-links">
+            <button className="action-tag">Previous Events</button>
+            <button className="action-tag">Speaker Applications</button>
+            <button className="action-tag">Volunteer</button>
+            <button className="action-tag">Sponsorship</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Community;

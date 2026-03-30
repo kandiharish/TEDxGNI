@@ -1,0 +1,48 @@
+.global-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  overflow: hidden;
+  background-color: #050505; /* Deep black context */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.bg-text-container {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollText 40s linear infinite;
+  opacity: 0.15; /* Translucent effect */
+}
+
+.bg-text {
+  font-size: 25vw;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  padding-right: 5vw;
+}
+
+.bg-text .ted {
+  color: #e62b1e; /* Core TEDx Red */
+}
+
+.bg-text .gni {
+  color: transparent;
+  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

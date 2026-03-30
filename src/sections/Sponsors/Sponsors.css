@@ -1,0 +1,139 @@
+.sponsors-section {
+  position: relative;
+  padding: 6rem 2rem;
+  background-color: transparent; /* Unifying backdrop */
+  overflow: hidden;
+}
+
+.sponsors-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Header */
+.sponsors-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sponsors-brand {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 0.2rem;
+  letter-spacing: -1px;
+}
+
+.sponsors-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Marquee Wave Container */
+.sponsors-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  margin-bottom: 4rem;
+  padding: 1rem 0; /* Box-shadow spillover space */
+}
+
+/* Track scrolling inner div */
+.sponsors-marquee-track {
+  display: flex;
+  width: max-content;
+  flex-wrap: nowrap;
+}
+
+/* Card */
+.sponsor-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 250px;
+  margin: 0 1.5rem;
+}
+
+.sponsor-card {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(230, 43, 30, 0.25);
+}
+
+.sponsor-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sponsor-label {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+/* Minimalist Pill Brochures */
+.brochures-pill-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 50px; /* Highly rounded for pill look */
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.brochure-btn-sponsor {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.brochure-btn-sponsor:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brochures-pill-container {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
