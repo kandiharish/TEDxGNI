@@ -141,12 +141,7 @@ const PastSeasons = () => {
               ))}
             </ul>
 
-            <div className="season-actions">
-              <button className="btn btn-primary watch-btn">
-                <Play size={18} fill="currentColor" className="play-icon" /> Watch Talks
-              </button>
-              <button className="btn btn-outline">View Photos</button>
-            </div>
+
           </div>
 
           {/* Image/Media Content */}

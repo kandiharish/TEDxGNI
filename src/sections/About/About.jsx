@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import './About.css';
@@ -31,20 +32,12 @@ const About = () => {
               loop
               muted
               playsInline
-              controls
               title="TEDxGNI Video"
             />
           </div>
 
           {/* Floating stat cards */}
-          <div className="stat-card stat-card--top">
-            <span className="stat-number">25+</span>
-            <span className="stat-label">Speakers sharing<br />innovative ideas</span>
-          </div>
-          <div className="stat-card stat-card--bottom">
-            <span className="stat-number">200+</span>
-            <span className="stat-label">Attendees expected<br />for the 2026 event</span>
-          </div>
+
         </motion.div>
 
         {/* Right — Text content */}
@@ -55,11 +48,17 @@ const About = () => {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
         >
-          <span className="about-badge">About Us</span>
+
           <h2 className="about-title">
             About <span className="red-accent">TEDx</span>GNI
           </h2>
-          <div className="about-divider"></div>
+          <motion.div 
+            className="about-divider"
+            initial={{ width: 0 }}
+            whileInView={{ width: 60 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          />
 
           <p className="about-desc">
             TEDxGNI is an independently organized TED event that brings together
@@ -82,14 +81,12 @@ const About = () => {
             ))}
           </ul>
 
-          <a
-            href="https://www.ted.com/tedx"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/about"
             className="btn btn-outline about-btn"
           >
             Learn More About TEDx GNI <ArrowRight size={18} />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

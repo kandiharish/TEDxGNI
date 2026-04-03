@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
+/* Force normal cursor visibility across everything */
+* {
+  cursor: auto;
+}
+
+a, button, [role="button"], .btn, .interactive {
+  cursor: pointer;
+}
+
 :root {
   --color-bg: #0a0a0a;
   --color-ted-red: #e62b1e;

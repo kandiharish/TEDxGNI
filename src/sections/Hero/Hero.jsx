@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
 import { ArrowRight, Globe } from 'lucide-react';
 import './Hero.css';
@@ -109,7 +110,7 @@ const AuraGlow = () => (
 );
 
 /* ─── Main Hero ─────────────────────────────────── */
-const Hero = () => {
+const Hero = ({ onTicketsClick }) => {
   const isFirstVisit = !sessionStorage.getItem('heroAnimationPlayed');
   const [phase, setPhase] = useState(isFirstVisit ? 0 : 4);
 
@@ -123,7 +124,7 @@ const Hero = () => {
     if (!isFirstVisit) return;
 
     const timers = [
-      setTimeout(() => setPhase(1), 1500),  // Show "Success is a fixed formula" (with glitch)
+      setTimeout(() => setPhase(1), 1500),  // Show "Success is not fixed formula" (with glitch)
       setTimeout(() => setPhase(2), 6500),  // THE SHATTER (after 5s of reading)
       setTimeout(() => {
         setPhase(3);
@@ -180,7 +181,7 @@ const Hero = () => {
                 style={{ width: '100%' }}
               >
                 <ShatterText 
-                  text="Success is a fixed formula." 
+                  text="Success is not fixed formula." 
                   isShattering={phase === 2}
                   isGlitching={phase === 1}
                 />
@@ -214,17 +215,18 @@ const Hero = () => {
             animate={phase >= 3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <a href="https://build.fillout.com/editor/preview/vwNtnMQfEcus" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-cta-hero">
+            <button 
+              onClick={onTicketsClick} 
+              className="btn btn-primary btn-cta-hero"
+            >
               Register Now
-            </a>
-            <a
-              href="https://www.ted.com/tedx"
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <Link
+              to="/about"
               className="btn btn-outline btn-cta-hero"
             >
               Learn More
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

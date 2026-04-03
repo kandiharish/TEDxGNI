@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import './EventInfo.css';
 
-const EventInfo = () => {
+const EventInfo = ({ onTicketsClick }) => {
   return (
     <section className="event-info-section" id="venue">
       <div className="wrapper event-info-wrapper">
@@ -35,7 +35,7 @@ const EventInfo = () => {
               <Calendar size={40} strokeWidth={1.5} className="info-icon" />
             </div>
             <h3 className="info-card-title">Date</h3>
-            <p className="info-card-text">April 29, 2026</p>
+            <p className="info-card-text highlight-date">April 29, 2026</p>
           </motion.div>
 
           {/* Card 2: Venue */}
@@ -79,7 +79,7 @@ const EventInfo = () => {
               <Clock size={40} strokeWidth={1.5} className="info-icon" />
             </div>
             <h3 className="info-card-title">Time</h3>
-            <p className="info-card-text">9:00 AM - 5:00 PM</p>
+            <p className="info-card-text">10AM - 3PM</p>
           </motion.div>
         </div>
 
@@ -91,7 +91,7 @@ const EventInfo = () => {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <button className="btn btn-primary reg-btn" onClick={() => window.open('https://build.fillout.com/editor/preview/vwNtnMQfEcus', '_blank')}>Register Now</button>
+          <button className="btn btn-primary reg-btn" onClick={onTicketsClick}>Register Now</button>
           <p className="reg-status-text">
             Secure your spot for the most inspiring event of the year! Limited seats available.
           </p>

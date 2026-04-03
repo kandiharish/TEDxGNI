@@ -67,11 +67,17 @@ const Countdown = () => {
           {/* Header */}
           <div className="countdown-header">
             <div className="date-badge">
-              <Calendar size={14} className="date-icon" />
+              <Calendar size={20} className="date-icon" />
               <span>April 29, 2026</span>
             </div>
             <h2 className="countdown-title">Event Starts In</h2>
-            <div className="countdown-divider"></div>
+            <motion.div 
+              className="countdown-divider"
+              initial={{ width: 0 }}
+              whileInView={{ width: 60 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+            />
           </div>
 
           {/* Timer Cards */}

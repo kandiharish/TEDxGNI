@@ -32,22 +32,6 @@ const speakersData = [
       { name: 'Supriyo Chakraborthy', desc: 'Entrepreneur & LGBTQIA+ Activist' },
       { name: 'Uma Rao Ganduri', desc: 'CHRO, Granules India' }
     ]
-  },
-  {
-    year: '2019',
-    title: 'The Road Not Taken',
-    speakers: [
-      { name: 'Ajinkya Jadhav', desc: 'Founder & CEO, WeAllTeen' },
-      { name: 'Capricio', desc: 'The Band' },
-      { name: 'Hema Balakrishnan', desc: 'Social Entrepreneur & Founder, ColorDEarth' },
-      { name: 'Hemang Vellore', desc: 'Young Innovator & Roboticist' },
-      { name: 'Ivana Perkovic', desc: 'YouTuber & Travel Vlogger' },
-      { name: 'Natasha Noel', desc: 'Yogini & Influencer' },
-      { name: 'Nikhil Paralikar', desc: 'Fusion Percussionist' },
-      { name: 'Praveen Kumar Gorakavi', desc: 'Scientist & Inventor' },
-      { name: 'Rajesh Vagh', desc: 'Founder & MD, PharmaTutor' },
-      { name: 'Uzma A Kazmi', desc: 'Senior Vice President, PNC Bank' }
-    ]
   }
 ];
 

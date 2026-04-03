@@ -7,13 +7,13 @@ import Testimonials from '../sections/Testimonials/Testimonials';
 import Community from '../sections/Community/Community';
 import Sponsors from '../sections/Sponsors/Sponsors';
 
-const Home = () => {
+const Home = ({ onTicketsClick }) => {
   return (
     <div>
-      <Hero />
+      <Hero onTicketsClick={onTicketsClick} />
       <About />
       <Countdown />
-      <EventInfo />
+      <EventInfo onTicketsClick={onTicketsClick} />
       <Sponsors />
       <Testimonials />
       <Community />

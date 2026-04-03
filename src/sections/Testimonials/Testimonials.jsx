@@ -9,14 +9,36 @@ const testimonialsData = [
     text: "It was an absolute honor to speak at TEDxGNI and be part of such a thoughtfully curated platform. The entire experience from the preparation to stepping onto the stage was truly enriching and memorable. The team’s professionalism, attention to detail, and passion made the journey seamless for every speaker. Engaging with such a vibrant and curious audience made the talk even more impactful. TEDxGNI is not just an event, but a powerful community driving meaningful conversations and ideas.",
     author: "Siv Ram Sastri",
     designation: "Speaker at TEDxGNI",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200"
+    image: "/sivramshastri.jpg.jpeg",
+    objectPosition: "top"
   },
   {
     id: 2,
     text: "The event exceeded my expectations, filled with genuine support. The team’s assistance helped me craft a talk that could spark change for students. Delivering on logistics highlighted its relevance and potential career pathways. Thank you, TEDx GNI, for the memorable experience and recognition.",
     author: "Apeksha Garg",
     designation: "Speaker at TEDxGNI",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200"
+    image: "/apekshagarg.jpg.jpeg"
+  },
+  {
+    id: 3,
+    text: "The experience at TEDxGNI truly exceeded my expectations. From the very beginning, the team was deeply involved in shaping the talk with clarity and purpose. The entire journey felt intentional, and standing in front of such an engaged audience made it even more meaningful. I’m grateful to have been part of a platform that genuinely values ideas and impact.",
+    author: "Crisna Chaithanya",
+    designation: "Speaker at TEDxGNI",
+    image: "/crisnachaitanya2023speaker.jpg.jpeg"
+  },
+  {
+    id: 4,
+    text: "It was an absolute pleasure to be part of TEDxGNI. The experience, from preparation to the final talk, was thoughtfully curated and seamless. The team’s attention to detail and commitment created a space where ideas could truly connect with people. Engaging with such a vibrant audience made it all the more memorable.",
+    author: "Ishitha Saluja",
+    designation: "Speaker at TEDxGNI",
+    image: "/ishithasaluja.jpg.jpeg"
+  },
+  {
+    id: 5,
+    text: "Speaking at TEDxGNI was both an honour and a rewarding experience. The team’s dedication and passion were evident at every stage, making the journey smooth and enriching. It’s inspiring to be part of a platform that brings together meaningful ideas and conversations. I truly value the experience and the connections it fostered.",
+    author: "Supriyo Chakraborty",
+    designation: "Speaker at TEDxGNI",
+    image: "/supriyochakraborty.jpg.jpeg"
   }
 ];
 
@@ -70,7 +92,13 @@ const Testimonials = () => {
           <h2 className="test-title">
             What People Say About <span className="red-accent">TEDx</span>GNI
           </h2>
-          <div className="test-divider"></div>
+          <motion.div 
+            className="test-divider"
+            initial={{ width: 0 }}
+            whileInView={{ width: 60 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          />
         </div>
 
         <div className="test-card-container">
@@ -97,6 +125,7 @@ const Testimonials = () => {
                       src={currentTest.image} 
                       alt={currentTest.author} 
                       className="test-avatar-img"
+                      style={{ objectPosition: currentTest.objectPosition || 'center' }}
                     />
                   </div>
                 </div>

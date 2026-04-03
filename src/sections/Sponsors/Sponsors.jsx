@@ -70,7 +70,12 @@ const Sponsors = () => {
           <a href="#brochure-attendee" className="btn btn-primary pill-btn">
             <Users size={16} /> Attendee Brochure
           </a>
-          <a href="#brochure-sponsor" className="btn btn-outline pill-btn brochure-btn-sponsor">
+          <a 
+            href="/SPONSORSHIP 1.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-outline pill-btn brochure-btn-sponsor"
+          >
             <Download size={16} /> Sponsorship Deck
           </a>
         </motion.div>

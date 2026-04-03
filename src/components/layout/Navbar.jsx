@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onTicketsClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -34,7 +34,12 @@ const Navbar = () => {
           <Link to="/speakers">Speakers</Link>
           <Link to="/venue">Venue</Link>
           <Link to="/past-seasons">Past Seasons</Link>
-          <a href="https://build.fillout.com/editor/preview/vwNtnMQfEcus" target="_blank" rel="noopener noreferrer" className="btn btn-primary nav-btn">Get Tickets</a>
+          <button 
+            onClick={onTicketsClick} 
+            className="btn btn-primary nav-btn"
+          >
+            Get Tickets
+          </button>
         </nav>
 
         <button 
