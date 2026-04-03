@@ -15,9 +15,9 @@ const testimonialsData = [
   {
     id: 2,
     text: "The event exceeded my expectations, filled with genuine support. The team’s assistance helped me craft a talk that could spark change for students. Delivering on logistics highlighted its relevance and potential career pathways. Thank you, TEDx GNI, for the memorable experience and recognition.",
-    author: "Apeksha Garg",
+    author: "Apeksha Gupta",
     designation: "Speaker at TEDxGNI",
-    image: "/apekshagarg.jpg.jpeg"
+    image: "/Apeksha_gupta1.webp"
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const testimonialsData = [
     text: "It was an absolute pleasure to be part of TEDxGNI. The experience, from preparation to the final talk, was thoughtfully curated and seamless. The team’s attention to detail and commitment created a space where ideas could truly connect with people. Engaging with such a vibrant audience made it all the more memorable.",
     author: "Ishitha Saluja",
     designation: "Speaker at TEDxGNI",
-    image: "/ishithasaluja.jpg.jpeg"
+    image: "/ishitha.jpeg"
   },
   {
     id: 5,

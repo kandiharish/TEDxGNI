@@ -8,7 +8,6 @@ const AboutPage = () => {
 
   const tabs = [
     { id: 'about', label: 'About TEDx' },
-    { id: 'mission', label: 'Our Mission' },
     { id: 'journey', label: 'Our Journey' },
     { id: 'theme', label: '2026 Theme' },
   ];
@@ -51,7 +50,6 @@ const AboutPage = () => {
             className="tab-panel"
           >
             {activeTab === 'about' && <AboutSection />}
-            {activeTab === 'mission' && <MissionSection />}
             {activeTab === 'journey' && <JourneySection />}
             {activeTab === 'theme' && <ThemeSection />}
           </motion.div>
@@ -128,72 +126,13 @@ const AboutSection = () => (
   </div>
 );
 
-/* ─── MISSION TAB ────────────────────────────────── */
-const MissionSection = () => (
-  <div className="tab-container">
-    <div className="mission-grid">
-      <div className="mission-left">
-        <h2 className="section-heading">Our Mission</h2>
-        <p className="margin-bottom">
-          Our mission is to discover and help spread ideas that spark imagination, embrace possibility and catalyze impact. By bringing together people who are curious and engaged, we aim to inspire conversations, build connections, and trigger action for a better future.
-        </p>
-        
-        <div className="features-grid">
-          <div className="feature-item">
-            <div className="icon-box"><Lightbulb size={20} /></div>
-            <div>
-              <h4>Ideas Worth Spreading</h4>
-              <p>We are committed to finding and sharing ideas that can change perspectives.</p>
-            </div>
-          </div>
-          <div className="feature-item">
-            <div className="icon-box"><Users size={20} /></div>
-            <div>
-              <h4>Community Connection</h4>
-              <p>We believe in the power of bringing people together to foster understanding.</p>
-            </div>
-          </div>
-          <div className="feature-item">
-            <div className="icon-box"><Search size={20} /></div>
-            <div>
-              <h4>Diversity of Thought</h4>
-              <p>We celebrate diverse perspectives and believe the best ideas emerge from variety.</p>
-            </div>
-          </div>
-          <div className="feature-item">
-            <div className="icon-box"><Award size={20} /></div>
-            <div>
-              <h4>Excellence in Experience</h4>
-              <p>We strive to create memorable, high-quality events that inspire our audience.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="mission-right">
-        <div className="impact-card">
-          <div className="impact-glow"></div>
-          <h3 className="red-accent">Our Impact</h3>
-          <ul className="impact-list">
-            <li><span className="arrow">→</span> 500+ attendees in past events</li>
-            <li><span className="arrow">→</span> 25+ speakers who have shared ideas</li>
-            <li><span className="arrow">→</span> 3,000+ online viewers of our talks</li>
-            <li><span className="arrow">→</span> 50+ student volunteers engaged</li>
-            <li><span className="arrow">→</span> 15+ local partnerships formed</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
 /* ─── JOURNEY TAB ────────────────────────────────── */
 const JourneySection = () => {
   const milestones = [
-    { year: 2020, title: 'TED introduces TEDx', desc: 'TED launches the TEDx program to enable independent organizers to create TED-like events in their communities.', align: 'left' },
-    { year: 2022, title: 'The Beginning', desc: 'Students at GNI establish the TEDxGNI license and begin planning the inaugural event.', align: 'right' },
-    { year: 2025, title: 'First TEDxGNI Event', desc: 'The inaugural TEDxGNI event brings together speakers from diverse fields to share ideas worth spreading.', align: 'left' },
-    { year: 2026, title: 'Program Expansion', desc: 'Growing the community with more events, larger audiences, and broader intellectual horizons.', align: 'right' },
+    { year: 2019, title: 'The Road Not Taken', desc: 'Our first major event focused on unconventional paths and celebrating the courage to explore untrodden ways.', align: 'left' },
+    { year: 2023, title: 'Shadowed Future', desc: 'Examining the relationship between our present choices and the uncertainties that shape our collective tomorrow.', align: 'right' },
+    { year: 2024, title: 'Uncovered Origins', desc: 'Exploring how every innovation and personal story is rooted in fundamental beginnings.', align: 'left' },
+    { year: 2026, title: 'Redefining Success', desc: 'Reshaping our understanding of achievement and impact in a rapidly changing global landscape.', align: 'right' },
   ];
 
   return (
@@ -232,15 +171,14 @@ const ThemeSection = () => (
           <p>
             Come explore how collaboration propels advancements in science, art, technology, social impact, and other fields via a day of thought-provoking presentations and interactive experiences.
           </p>
-          <button className="btn btn-primary margin-top">Apply to Speak <ArrowRight size={18} style={{marginLeft: 8}} /></button>
         </div>
       </div>
       <div className="theme-images">
         <div className="image-grid">
-          <div className="theme-img bg-img-1"></div>
-          <div className="theme-img bg-img-2"></div>
-          <div className="theme-img bg-img-3"></div>
-          <div className="theme-img bg-img-4"></div>
+          <div className="theme-img" style={{ backgroundImage: "url('/theme image 1.avif')" }}></div>
+          <div className="theme-img" style={{ backgroundImage: "url('/theme image 2.jpg')" }}></div>
+          <div className="theme-img" style={{ backgroundImage: "url('/theme image 3.webp')" }}></div>
+          <div className="theme-img" style={{ backgroundImage: "url('/theme image 4.avif')" }}></div>
         </div>
       </div>
     </div>

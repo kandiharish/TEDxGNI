@@ -61,6 +61,7 @@ const PastSeasons = () => {
       title: 'Uncovered Origins',
       desc: 'Our 2024 event explored the theme "Uncovered Origins," focusing on how every innovation, idea, and personal journey is rooted in fundamental beginnings. The talks emphasized understanding core principles that shape success, creativity, and human growth across disciplines.',
       speakers: [
+        'Vinay Chopra – Recruitment & Operations Leader',
         'Aditya Kuchibhotla – Chartered Accountant & VP, Berkadia',
         'Apeksha Gupta – SCM Research Scholar & Logistics Academician',
         'Ishita Saluja – Personal Stylist & Image Consultant',
@@ -69,8 +70,7 @@ const PastSeasons = () => {
         'Mohammed Vanderheyden – Chairman, REEM Foundation',
         'Dr. Mohit Ramsinghani – Business Leader, Real Estate',
         'S Krithivasan – VP HR & HR Leader',
-        'Sahil Nayar – HR Influencer & L&D Expert',
-        'Vinay Chopra – Recruitment & Operations Leader'
+        'Sahil Nayar – HR Influencer & L&D Expert'
       ],
       align: 'left',
       bgClass: 'bg-season-3'

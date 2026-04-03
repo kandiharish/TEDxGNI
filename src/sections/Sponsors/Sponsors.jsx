@@ -67,17 +67,15 @@ const Sponsors = () => {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <a href="#brochure-attendee" className="btn btn-primary pill-btn">
-            <Users size={16} /> Attendee Brochure
-          </a>
-          <a 
-            href="/SPONSORSHIP 1.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="btn btn-outline pill-btn brochure-btn-sponsor"
+          <button className="btn btn-primary pill-btn coming-soon-btn" disabled>
+            <Users size={16} /> Attendee Brochure (Coming Soon)
+          </button>
+          <button 
+            className="btn btn-outline pill-btn brochure-btn-sponsor coming-soon-btn"
+            disabled
           >
-            <Download size={16} /> Sponsorship Deck
-          </a>
+            <Download size={16} /> Sponsorship Deck (Coming Soon)
+          </button>
         </motion.div>
 
       </div>

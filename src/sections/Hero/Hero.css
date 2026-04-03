@@ -299,17 +299,40 @@
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll !important; /* Fixes shaking on mobile */
+    padding-top: 100px;
+    min-height: 85vh;
+  }
+
   .hero-text-container {
-    gap: 1rem;
-    min-height: 320px;
+    gap: 1.2rem;
+    min-height: 250px;
+  }
+
+  .glitch-wrapper {
+    font-size: 2.22rem;
+    line-height: 1.3;
+    padding: 0 1rem;
+    justify-content: center;
+  }
+
+  .shatter-word {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 0.15rem;
   }
 
   .hero-cta-spaced {
-    gap: 1.5rem;
+    gap: 1rem;
+    margin-top: 3rem !important;
+    flex-direction: column;
   }
 
   .btn-cta-hero {
     width: 100%;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
   }
 }

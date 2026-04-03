@@ -51,43 +51,50 @@ const arrowConfig = [
 
 /* ─── Digital Shatter Engine ─────────────────── */
 const ShatterText = ({ text, isShattering, isGlitching }) => {
+  const words = text.split(' ');
+  
   return (
     <div className="glitch-wrapper">
-      {text.split('').map((char, index) => {
-        // Random explosion vectors for each character
-        const randomX = (Math.random() - 0.5) * 1400;
-        const randomY = (Math.random() - 0.5) * 1000;
-        const randomRotate = (Math.random() - 0.5) * 1080;
-        const randomScale = 1 + Math.random() * 3;
+      {words.map((word, wIndex) => (
+        <span key={wIndex} className="shatter-word" style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>
+          {word.split('').map((char, cIndex) => {
+            const index = text.indexOf(word) + cIndex;
+            const randomX = (Math.random() - 0.5) * 1400;
+            const randomY = (Math.random() - 0.5) * 1000;
+            const randomRotate = (Math.random() - 0.5) * 1080;
+            const randomScale = 1 + Math.random() * 3;
 
-        return (
-          <motion.span
-            key={index}
-            className={`shatter-char ${isGlitching ? 'glitch-text' : ''}`}
-            data-text={char}
-            initial={{ opacity: 1, x: 0, y: 0, rotate: 0, scale: 1 }}
-            animate={isShattering ? {
-              opacity: [1, 1, 0],
-              x: randomX,
-              y: randomY,
-              rotate: randomRotate,
-              scale: randomScale,
-              filter: ['blur(0px)', 'blur(4px)', 'blur(12px)']
-            } : {
-              opacity: 1,
-              x: 0, y: 0, rotate: 0, scale: 1,
-              filter: 'blur(0px)'
-            }}
-            transition={{ 
-              duration: isShattering ? 1.2 : 0, 
-              ease: "easeOut",
-              times: [0, 0.4, 1]
-            }}
-          >
-            {char}
-          </motion.span>
-        );
-      })}
+            return (
+              <motion.span
+                key={cIndex}
+                className={`shatter-char ${isGlitching ? 'glitch-text' : ''}`}
+                data-text={char}
+                initial={{ opacity: 1, x: 0, y: 0, rotate: 0, scale: 1 }}
+                animate={isShattering ? {
+                  opacity: [1, 1, 0],
+                  x: randomX,
+                  y: randomY,
+                  rotate: randomRotate,
+                  scale: randomScale,
+                  filter: ['blur(0px)', 'blur(4px)', 'blur(12px)']
+                } : {
+                  opacity: 1,
+                  x: 0, y: 0, rotate: 0, scale: 1,
+                  filter: 'blur(0px)'
+                }}
+                transition={{ 
+                  duration: isShattering ? 1.2 : 0, 
+                  ease: "easeOut",
+                  times: [0, 0.4, 1]
+                }}
+              >
+                {char}
+              </motion.span>
+            );
+          })}
+          {wIndex < words.length - 1 && <span className="shatter-char">&nbsp;</span>}
+        </span>
+      ))}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, ArrowRight } from 'lucide-react';
 import './Community.css';
 
@@ -36,10 +37,10 @@ const Community = () => {
           </div>
 
           <div className="action-links">
-            <button className="action-tag">Previous Events</button>
-            <button className="action-tag">Speaker Applications</button>
-            <button className="action-tag">Volunteer</button>
-            <button className="action-tag">Sponsorship</button>
+            <Link to="/past-seasons" className="action-tag">Previous Events</Link>
+            <button className="action-tag" onClick={() => window.location.href='mailto:tedxgni@gniindia.org'}>Speaker Applications</button>
+            <button className="action-tag" onClick={() => window.location.href='mailto:tedxgni@gniindia.org'}>Volunteer</button>
+            <a href="/SPONSORSHIP 1.pdf" target="_blank" rel="noopener noreferrer" className="action-tag">Sponsorship</a>
           </div>
         </div>
       </div>

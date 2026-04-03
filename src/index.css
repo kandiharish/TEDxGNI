@@ -3,6 +3,7 @@
 /* Force normal cursor visibility across everything */
 * {
   cursor: auto;
+  scroll-behavior: smooth;
 }
 
 a, button, [role="button"], .btn, .interactive {
