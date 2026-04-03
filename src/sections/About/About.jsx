@@ -25,13 +25,14 @@ const About = () => {
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           <div className="video-frame">
-            {/* Replace src with real YouTube embed when available */}
             <video
               src="/tedxgni video.mp4"
+              poster="/speaker-big-stage.jpg"
               autoPlay
               loop
               muted
               playsInline
+              preload="auto"
               title="TEDxGNI Video"
             />
           </div>
