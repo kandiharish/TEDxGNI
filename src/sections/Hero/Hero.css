@@ -94,10 +94,14 @@
   z-index: 5;
 }
 
-.redefine-highlight {
+.redefine-text, .redefine-highlight {
   position: relative;
-  color: #ffffff;
   display: inline-block;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+  
+  /* Pure White/Silver Shine */
   background: linear-gradient(
     90deg, 
     #ffffff 0%, 
@@ -110,37 +114,21 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine-sweep 5s linear infinite;
   
-  /* Premium Layered Shadow for Depth */
-  text-shadow: 
-    0 0 1px rgba(255, 255, 255, 0.4),
-    0 0 15px rgba(230, 43, 30, 0.5),
-    0 0 25px rgba(230, 43, 30, 0.2);
+  /* Fixing 'g' clipping with vertical breathing room */
+  padding-bottom: 0.15em;
+  line-height: 1.2;
+  
+  animation: shine-sweep 6s linear infinite;
+  
+  /* Elegant Drop Shadow (No Red) */
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   
   text-decoration: none !important;
 }
 
 @keyframes shine-sweep {
   to { background-position: 200% center; }
-}
-
-.redefine-text {
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #b3b3b3 50%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 300; /* Sophisticated light weight */
-  letter-spacing: 4px; /* Professional spacing */
-  text-transform: uppercase;
-  position: relative;
-  text-decoration: none !important;
-  opacity: 0.9;
 }
 
 /* ─── CTA Buttons ─────────────────────────────── */
@@ -170,7 +158,8 @@
 /* Responsive */
 @media (max-width: 768px) {
   .hero-section {
-    background-attachment: scroll !important; /* Fixes shaking on mobile */
+    background-attachment: scroll !important;
+    /* Fixes shaking on mobile */
     padding-top: 100px;
     min-height: 85vh;
   }
