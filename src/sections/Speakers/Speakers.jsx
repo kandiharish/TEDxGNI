@@ -36,7 +36,7 @@ const speakersData = [
         name: 'Manisha Chopra', 
         desc: 'Nutritionist & Wellness Coach',
         image: '/manisha-chopra.jpg.jpeg',
-        objectPosition: 'center 10%'
+        objectPosition: '20% center'
       },
       { 
         name: 'Mohammed Vanderheyden', 

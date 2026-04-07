@@ -75,8 +75,13 @@ const Footer = () => {
           <div className="footer-col contact-col">
             <h3 className="footer-heading">Contact</h3>
             <p className="contact-detail" style={{ marginBottom: '0.8rem' }}>For any queries, please contact:</p>
-            <p className="contact-detail" style={{ fontWeight: '600', color: 'white', marginBottom: '0.2rem' }}>Krithi Bhaskara</p>
-            <p className="contact-detail" style={{ fontSize: '0.9rem', marginBottom: '0.8rem' }}>Licencee/ Organizer <br/> 78160 72677</p>
+            <p className="contact-detail" style={{ marginBottom: '0.2rem' }}>
+              <span className="shiny-text" style={{ fontSize: '1.05rem' }}>Krithi Bhaskara</span>
+            </p>
+            <p className="contact-detail" style={{ fontSize: '0.9rem', marginBottom: '0.8rem' }}>
+              <span className="shiny-text">Licencee/ Organizer</span> <br/> 
+              <span style={{ display: 'inline-block', marginTop: '0.3rem' }}>78160 72677</span>
+            </p>
             <p className="contact-detail">Email: tedxgni@gniindia.org</p>
             <p className="contact-address">
               Guru Nanak Institutions<br />
@@ -87,7 +92,12 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 TEDxGNI. All rights reserved. Developed by Harish kandi</p>
+          <p>© 2026 TEDxGNI. All rights reserved.</p>
+          <p style={{ marginTop: '0.6rem' }}>
+             <a href="https://www.linkedin.com/in/harish-kandi/" target="_blank" rel="noopener noreferrer" className="developer-link">
+               <span className="shiny-text">Developed by Harish Kandi</span>
+             </a>
+          </p>
         </div>
       </div>
     </footer>
