@@ -21,7 +21,7 @@ const CallToAction = () => {
             </p>
             
             <div className="cta-btn-group">
-              <a href="https://build.fillout.com/editor/preview/vwNtnMQfEcus" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-cta">
+              <a href="https://forms.fillout.com/t/vwNtnMQfEcus" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-cta">
                 Register Now <ArrowRight size={20} className="icon-right" />
               </a>
               <a 

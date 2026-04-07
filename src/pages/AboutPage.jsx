@@ -160,7 +160,7 @@ const ThemeSection = () => (
     <div className="theme-grid">
       <div className="theme-text">
         <h2 className="section-heading">Theme of TEDxGNI 2026</h2>
-        <div className="theme-badge">Redefining Success</div>
+        <div className="theme-badge">Redefining <span className="theme-highlight">Success</span></div>
         <div className="theme-desc">
           <p>
             Our upcoming event explores "Redefining Success" – examining how we can reshape our understanding of achievement in a rapidly changing world, looking beyond traditional metrics to truly profound impact.

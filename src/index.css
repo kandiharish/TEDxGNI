@@ -91,3 +91,12 @@ ul {
 .btn-outline:hover {
   border-color: white;
 }
+
+.red-accent {
+  color: var(--color-ted-red);
+}
+
+.theme-highlight {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(230, 43, 30, 0.4);
+}

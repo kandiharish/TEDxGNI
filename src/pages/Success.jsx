@@ -53,7 +53,7 @@ const Success = () => {
               <div className="ticket-brand">
                 <span className="ted">TEDx</span><span className="gni">GNI</span>
               </div>
-              <h2 className="ticket-theme">Redefining Success</h2>
+              <h2 className="ticket-theme">Redefining <span className="theme-highlight">Success</span></h2>
               
               <div className="attendee-details">
                 <div className="detail-group">

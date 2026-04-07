@@ -11,30 +11,28 @@ import PastSeasonsPage from './pages/PastSeasonsPage';
 import SpeakersPage from './pages/SpeakersPage';
 import Register from './pages/Register';
 import Success from './pages/Success';
-import TicketsModal from './components/common/TicketsModal';
 import './App.css';
 
 function App() {
   const isFirstVisit = !sessionStorage.getItem('preloaderPlayed');
   const [showPreloader, setShowPreloader] = useState(isFirstVisit);
-  const [showTicketsModal, setShowTicketsModal] = useState(false);
 
   const handlePreloaderComplete = useCallback(() => {
     sessionStorage.setItem('preloaderPlayed', 'true');
     setShowPreloader(false);
   }, []);
 
-  const toggleTicketsModal = useCallback(() => {
-    setShowTicketsModal(prev => !prev);
+  const handleTicketsRedirect = useCallback(() => {
+    window.location.href = 'https://forms.fillout.com/t/vwNtnMQfEcus';
   }, []);
 
   return (
     <Router>
       {showPreloader && <PreLoader onComplete={handlePreloaderComplete} />}
       <Particles />
-      <Layout onTicketsClick={toggleTicketsModal}>
+      <Layout onTicketsClick={handleTicketsRedirect}>
         <Routes>
-          <Route path="/" element={<Home onTicketsClick={toggleTicketsModal} />} />
+          <Route path="/" element={<Home onTicketsClick={handleTicketsRedirect} />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/speakers" element={<SpeakersPage />} />
           <Route path="/venue" element={<VenuePage />} />
@@ -43,8 +41,6 @@ function App() {
           <Route path="/success" element={<Success />} />
         </Routes>
       </Layout>
-      <TicketsModal isOpen={showTicketsModal} onClose={toggleTicketsModal} />
-
     </Router>
   );
 }
