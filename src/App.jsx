@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   const handleTicketsRedirect = useCallback(() => {
-    window.location.href = 'https://forms.fillout.com/t/vwNtnMQfEcus';
+    window.open('https://forms.fillout.com/t/vwNtnMQfEcus', '_blank');
   }, []);
 
   return (

@@ -97,6 +97,6 @@ ul {
 }
 
 .theme-highlight {
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  color: var(--color-ted-red);
+  text-shadow: 0 0 12px rgba(230, 43, 30, 0.4);
 }

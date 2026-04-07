@@ -59,12 +59,14 @@ const Hero = ({ onTicketsClick }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <button 
-              onClick={onTicketsClick} 
+            <a 
+              href="https://forms.fillout.com/t/vwNtnMQfEcus"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary btn-cta-hero"
             >
               Register Now
-            </button>
+            </a>
             <Link
               to="/about"
               className="btn btn-outline btn-cta-hero"

@@ -34,12 +34,14 @@ const Navbar = ({ onTicketsClick }) => {
           <Link to="/speakers">Speakers</Link>
           <Link to="/venue">Venue</Link>
           <Link to="/past-seasons">Past Seasons</Link>
-          <button 
-            onClick={onTicketsClick} 
+          <a 
+            href="https://forms.fillout.com/t/vwNtnMQfEcus"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-primary nav-btn"
           >
             Get Tickets
-          </button>
+          </a>
         </nav>
 
         <button 

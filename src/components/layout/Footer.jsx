@@ -74,8 +74,9 @@ const Footer = () => {
           {/* Contact */}
           <div className="footer-col contact-col">
             <h3 className="footer-heading">Contact</h3>
-            <p className="contact-detail">For any queries, please contact:</p>
-            <p className="contact-detail">Krithi Bhaskara - 78160 72677</p>
+            <p className="contact-detail" style={{ marginBottom: '0.8rem' }}>For any queries, please contact:</p>
+            <p className="contact-detail" style={{ fontWeight: '600', color: 'white', marginBottom: '0.2rem' }}>Krithi Bhaskara</p>
+            <p className="contact-detail" style={{ fontSize: '0.9rem', marginBottom: '0.8rem' }}>Licencee/ Organizer <br/> 78160 72677</p>
             <p className="contact-detail">Email: tedxgni@gniindia.org</p>
             <p className="contact-address">
               Guru Nanak Institutions<br />

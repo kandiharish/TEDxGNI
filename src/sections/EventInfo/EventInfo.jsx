@@ -91,7 +91,7 @@ const EventInfo = ({ onTicketsClick }) => {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <button className="btn btn-primary reg-btn" onClick={onTicketsClick}>Register Now</button>
+          <a href="https://forms.fillout.com/t/vwNtnMQfEcus" target="_blank" rel="noopener noreferrer" className="btn btn-primary reg-btn">Register Now</a>
           <p className="reg-status-text">
             Secure your spot for the most inspiring event of the year! Limited seats available.
           </p>

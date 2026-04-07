@@ -68,12 +68,12 @@ const Sponsors = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <a 
-            href="/SPONSORSHIP  DECK.pdf" 
-            target="_blank" 
+            href="/SPONSORSHIP  DECK.pdf"
+            target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline pill-btn brochure-btn-sponsor"
           >
-            <Download size={16} /> Sponsorship Deck
+            <Download size={16} /> Sponsorship Deck (Download)
           </a>
         </motion.div>
 

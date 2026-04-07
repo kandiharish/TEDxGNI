@@ -20,7 +20,7 @@ const speakersData = [
       { 
         name: 'Apeksha Gupta', 
         desc: 'SCM Research Scholar & Logistics Academician',
-        image: '/Apeksha_gupta1.webp'
+        image: '/Apeksha_gupta1.jpeg'
       },
       { 
         name: 'Ishita Saluja', 
