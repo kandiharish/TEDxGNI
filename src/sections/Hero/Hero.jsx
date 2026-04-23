@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import './Hero.css';
 
@@ -22,6 +21,14 @@ const Hero = ({ onTicketsClick }) => {
   const handleMouseLeave = () => {
     x.set(0);
     y.set(0);
+  };
+
+  const scrollToSpeakers = (e) => {
+    e.preventDefault();
+    const speakersSection = document.getElementById('current-speakers');
+    if (speakersSection) {
+      speakersSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -51,28 +58,45 @@ const Hero = ({ onTicketsClick }) => {
             </div>
           </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            className="hero-cta-group hero-cta-spaced"
-            style={{ marginTop: '4rem' }}
-            initial={{ opacity: 0, y: 10 }}
+          <motion.div 
+            className="cta-wrapper"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <a 
-              href="https://forms.fillout.com/t/vwNtnMQfEcus"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary btn-cta-hero"
+            <motion.div 
+              className="urgency-banner"
+              animate={{ 
+                scale: [1, 1.02, 1],
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
             >
-              Register Now
-            </a>
-            <Link
-              to="/about"
-              className="btn btn-outline btn-cta-hero"
-            >
-              Learn More
-            </Link>
+              <span className="pulse-dot"></span>
+              Only <span className="highlight-number">100</span> tickets left! Grab yours soon.
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <div className="hero-cta-group hero-cta-spaced">
+              <a 
+                href="https://forms.fillout.com/t/vwNtnMQfEcus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-cta-hero register-pulse"
+              >
+                Register Now
+              </a>
+              <a
+                href="#current-speakers"
+                onClick={scrollToSpeakers}
+                className="btn btn-outline btn-cta-hero speakers-btn"
+              >
+                Meet the 2026 Speakers
+              </a>
+            </div>
           </motion.div>
         </motion.div>
       </div>

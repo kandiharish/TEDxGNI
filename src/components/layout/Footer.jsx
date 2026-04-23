@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="wrapper">
         <div className="footer-grid">
           {/* Brand & Socials */}
@@ -93,11 +93,13 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p>© 2026 TEDxGNI. All rights reserved.</p>
-          <p style={{ marginTop: '0.6rem' }}>
+          <div className="developer-credit-wrapper">
+             <p className="developer-prompt">Want to know more about the developer?</p>
              <a href="https://www.linkedin.com/in/harish-kandi/" target="_blank" rel="noopener noreferrer" className="developer-link">
-               <span className="shiny-text">Developed by Harish Kandi</span>
+               <span className="shiny-text">Meet Harish Kandi </span>
+               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{marginLeft: '4px', position: 'relative', top: '2px'}}><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
              </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

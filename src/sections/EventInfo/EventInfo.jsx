@@ -83,19 +83,6 @@ const EventInfo = ({ onTicketsClick }) => {
           </motion.div>
         </div>
 
-        {/* Registration Open Block */}
-        <motion.div 
-          className="event-registration-status"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <a href="https://forms.fillout.com/t/vwNtnMQfEcus" target="_blank" rel="noopener noreferrer" className="btn btn-primary reg-btn">Register Now</a>
-          <p className="reg-status-text">
-            Secure your spot for the most inspiring event of the year! Limited seats available.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

@@ -35,12 +35,20 @@ const Navbar = ({ onTicketsClick }) => {
           <Link to="/venue">Venue</Link>
           <Link to="/past-seasons">Past Seasons</Link>
           <a 
-            href="https://forms.fillout.com/t/vwNtnMQfEcus"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             className="btn btn-primary nav-btn"
+            onClick={(e) => {
+              if (window.location.pathname === '/') {
+                e.preventDefault();
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                  setMobileMenuOpen(false);
+                }
+              }
+            }}
           >
-            Get Tickets
+            Contact Us
           </a>
         </nav>
 

@@ -147,19 +147,71 @@
 }
 
 /* ─── CTA Buttons ─────────────────────────────── */
+.cta-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.urgency-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(200, 10, 10, 0.15);
+  border: 1px solid rgba(230, 43, 30, 0.3);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 20px rgba(230, 43, 30, 0.2);
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff3b2e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(255, 59, 46, 0.7);
+  animation: pulse-dot-anim 1.5s infinite;
+}
+
+@keyframes pulse-dot-anim {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 59, 46, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 59, 46, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 59, 46, 0); }
+}
+
+.highlight-number {
+  color: #ff3b2e;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
 .hero-cta-spaced {
   display: flex;
   gap: 2.5rem;
-  /* Increased gap between buttons */
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .btn-cta-hero {
   padding: 1rem 3rem;
-  /* Wider buttons without icons */
   font-size: 1.1rem;
   letter-spacing: 0.5px;
+}
+
+.register-pulse {
+  animation: register-pulse-border 2s infinite;
+}
+
+@keyframes register-pulse-border {
+  0% { box-shadow: 0 0 0 0 rgba(230, 43, 30, 0.6); }
+  70% { box-shadow: 0 0 0 20px rgba(230, 43, 30, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(230, 43, 30, 0); }
 }
 
 /* ─── Shared ──────────────────────────────────── */
@@ -182,6 +234,15 @@
     gap: 1.2rem;
     min-height: 250px;
   }
+  
+  .cta-wrapper {
+    margin-top: 2rem;
+  }
+
+  .urgency-banner {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
 
   .glitch-wrapper {
     font-size: 2.22rem;
@@ -198,8 +259,9 @@
 
   .hero-cta-spaced {
     gap: 1rem;
-    margin-top: 3rem !important;
+    margin-top: 1rem;
     flex-direction: column;
+    width: 100%;
   }
 
   .btn-cta-hero {
