@@ -76,7 +76,7 @@ const Hero = ({ onTicketsClick }) => {
               }}
             >
               <span className="pulse-dot"></span>
-              Only <span className="highlight-number">100</span> tickets left! Grab yours soon.
+              Last <span className="highlight-number">60</span> tickets left! Grab yours soon.
             </motion.div>
 
             {/* CTA Buttons */}
