@@ -39,6 +39,14 @@ const speakers2026 = [
     title: "To Be Revealed",
     image: "/dinesh kumar murugeshan.png",
     linkedin: "https://www.linkedin.com/in/dineshkumarm/?skipRedirect=true"
+  },
+  {
+    id: 6,
+    name: "Sana Afreen",
+    title: "To Be Revealed",
+    image: "/sana afreen small photo.png",
+    fullImage: "/sana afreen full photo.jpeg",
+    scale: 0.9
   }
 ];
 

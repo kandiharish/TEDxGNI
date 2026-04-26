@@ -8,6 +8,7 @@ import EventInfo from '../sections/EventInfo/EventInfo';
 import Testimonials from '../sections/Testimonials/Testimonials';
 import Community from '../sections/Community/Community';
 import Sponsors from '../sections/Sponsors/Sponsors';
+import Afterglow from '../sections/Afterglow/Afterglow';
 
 const Home = ({ onTicketsClick }) => {
   const [showFab, setShowFab] = useState(false);
@@ -36,6 +37,8 @@ const Home = ({ onTicketsClick }) => {
       <CurrentSpeakers onTicketsClick={onTicketsClick} />
       
       <EventInfo onTicketsClick={onTicketsClick} />
+      
+      <Afterglow />
       
       <Sponsors />
       <Testimonials />
