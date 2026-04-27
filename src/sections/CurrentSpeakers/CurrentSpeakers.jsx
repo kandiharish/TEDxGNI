@@ -47,6 +47,13 @@ const speakers2026 = [
     image: "/sana afreen small photo.png",
     fullImage: "/sana afreen full photo.jpeg",
     scale: 0.9
+  },
+  {
+    id: 7,
+    name: "Yashna Mathuluri",
+    title: "To Be Revealed",
+    image: "/yashna mathuluri.png",
+    instagram: "https://www.instagram.com/yashnae7/?hl=en"
   }
 ];
 
@@ -98,8 +105,9 @@ const CurrentSpeakers = ({ onTicketsClick }) => {
                     className="know-more-btn"
                     onClick={(e) => {
                       e.stopPropagation();
-                      if (speaker.linkedin) {
-                        window.open(speaker.linkedin, "_blank", "noopener,noreferrer");
+                      const link = speaker.linkedin || speaker.instagram;
+                      if (link) {
+                        window.open(link, "_blank", "noopener,noreferrer");
                       } else {
                         setSelectedImage(speaker.fullImage);
                       }
