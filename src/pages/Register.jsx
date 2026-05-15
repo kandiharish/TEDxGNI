@@ -173,108 +173,33 @@ const Register = () => {
         </motion.div>
 
         <motion.div 
-          className="register-card"
+          className="register-card registration-closed-card"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2 }}
         >
-          <div className="ticket-info">
-            <div className="ticket-type">General Admission</div>
-            <div className="ticket-price">
-              <span className="currency">₹</span>899
+          <div className="registration-closed-content">
+            <CheckCircle2 size={64} className="closed-icon" />
+            <h2>Registration Closed</h2>
+            <p>
+              TEDxGNI 2026 has successfully concluded. We are no longer accepting new registrations for this season.
+            </p>
+            <div className="closed-actions">
+              <button 
+                className="btn btn-primary"
+                onClick={() => navigate('/')}
+              >
+                Back to Home
+              </button>
+              <button 
+                className="btn btn-outline"
+                onClick={() => navigate('/past-seasons')}
+              >
+                View Past Seasons
+              </button>
             </div>
-            <ul className="ticket-perks">
-              <li>✓ Full Day Access</li>
-              <li>✓ Starter Kit & Goodies</li>
-              <li>✓ Lunch & High Tea</li>
-              <li>✓ Certificate of Participation</li>
-            </ul>
           </div>
-
-          <form className="register-form" onSubmit={handleSubmit}>
-            <AnimatePresence>
-              {submitStatus === 'error' && Object.keys(errors).length > 0 && (
-                <motion.div 
-                  className="form-alert error"
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                >
-                  <AlertCircle size={20} />
-                  <span>{errors.general || 'Please fix the errors below.'}</span>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className={errors.name ? 'error-input' : ''}
-                placeholder="John Doe"
-              />
-              {errors.name && <span className="error-text">{errors.name}</span>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className={errors.email ? 'error-input' : ''}
-                placeholder="john@example.com"
-              />
-              {errors.email && <span className="error-text">{errors.email}</span>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                className={errors.phone ? 'error-input' : ''}
-                placeholder="9876543210"
-              />
-              {errors.phone && <span className="error-text">{errors.phone}</span>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="college">College/Organization</label>
-              <input
-                type="text"
-                id="college"
-                name="college"
-                value={formData.college}
-                onChange={handleInputChange}
-                className={errors.college ? 'error-input' : ''}
-                placeholder="GNI"
-              />
-              {errors.college && <span className="error-text">{errors.college}</span>}
-            </div>
-
-            <button 
-              type="submit" 
-              className="btn btn-primary submit-btn"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? (
-                <> <Loader2 size={20} className="spin" /> Processing Payment... </>
-              ) : (
-                <> Proceed to Payment <ArrowRight size={20} /> </>
-              )}
-            </button>
-          </form>
         </motion.div>
       </div>
     </div>

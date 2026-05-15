@@ -18,7 +18,7 @@ const EventInfo = ({ onTicketsClick }) => {
             Join Us at <span className="red-accent">TEDx</span>GNI 2026
           </h2>
           <p className="event-info-subtitle">
-            Mark your calendar for our upcoming event featuring thought-provoking talks and inspiring performances.
+            Thank you to everyone who joined us for an inspiring day of ideas and connection. It was truly an unforgettable experience.
           </p>
         </motion.div>
 

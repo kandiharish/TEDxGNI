@@ -123,17 +123,6 @@ const CurrentSpeakers = ({ onTicketsClick }) => {
           </div>
         </div>
 
-        <motion.div 
-          className="speakers-cta-container"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <button className="premium-cta-btn pulse-glow" onClick={onTicketsClick}>
-            Secure Your Seat Now
-          </button>
-        </motion.div>
       </div>
 
       <AnimatePresence>

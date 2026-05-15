@@ -16,22 +16,9 @@ const Afterglow = () => {
           >
             <h3 className="afterglow-tagline">The Post-Event Experience</h3>
             <h2 className="section-title">The <span className="red-accent">Afterglow Band.</span></h2>
-            <p className="afterglow-statement">
-              The Stage is Set for the <span className="highlight-text">Rhythm of Ideas.</span>
-            </p>
             <p className="afterglow-description">
-              Elevate your TEDx experience with an extraordinary live performance. Featuring a high-energy <strong>Live Band</strong> and a mesmerizing <strong>Violinist</strong>, the Afterglow is where intellectual sparks meet soulful melodies.
+              The Stage is Set for the <span className="highlight-text">Rhythm of Ideas.</span> Elevate your TEDx experience with an extraordinary live performance. Featuring a high-energy <strong>Live Band</strong> and a mesmerizing <strong>Violinist</strong>, the Afterglow was where intellectual sparks met soulful melodies.
             </p>
-            <motion.a 
-              href="https://forms.gle/SfaDTV841iGCfQPo9" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="afterglow-cta-btn"
-              whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(230, 43, 30, 0.4)' }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Your Band Pass Now
-            </motion.a>
           </motion.div>
 
           <div className="afterglow-visual-container">

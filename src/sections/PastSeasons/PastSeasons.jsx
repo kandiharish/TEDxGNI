@@ -56,6 +56,23 @@ const InteractiveImageCard = ({ season }) => {
 const PastSeasons = () => {
   const seasons = [
     {
+      id: 4,
+      year: '2026',
+      title: 'Redefining Success',
+      desc: 'TEDxGNI 2026 brought together a diverse group of visionaries to explore the theme "Redefining Success." The event challenged conventional metrics of achievement, focusing instead on impact, resilience, and personal fulfillment in an ever-changing world.',
+      speakers: [
+        'Shivaranjani – Visionary Leader',
+        'Harshith Sai – Innovation Expert',
+        'Athvik – Creative Thinker',
+        'Josna – Social Change Advocate',
+        'Dinesh Kumar Murugesan – Tech Pioneer',
+        'Sana Afreen – Inspirational Voice',
+        'Yashna Mathuluri – Community Builder'
+      ],
+      align: 'right',
+      bgClass: 'bg-season-4'
+    },
+    {
       id: 3,
       year: '2024',
       title: 'Uncovered Origins',

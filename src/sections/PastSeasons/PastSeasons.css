@@ -122,6 +122,7 @@
 }
 
 /* Event Photos Backgrounds */
+.bg-season-4 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('/speaker-big-stage.jpg'); }
 .bg-season-3 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('/uncovered%20origins%202024.png'); }
 .bg-season-2 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('/shadowed%20future%202023.jpg'); }
 .bg-season-1 { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('/road%20not%20taken%202019.webp'); }

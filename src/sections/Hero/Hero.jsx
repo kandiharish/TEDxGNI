@@ -64,37 +64,20 @@ const Hero = ({ onTicketsClick }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <motion.div 
-              className="urgency-banner"
-              animate={{ 
-                scale: [1, 1.02, 1],
-              }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <span className="pulse-dot"></span>
-              Last <span className="highlight-number">10</span> tickets left! Grab them soon.
-            </motion.div>
-
             {/* CTA Buttons */}
             <div className="hero-cta-group hero-cta-spaced">
-              <a 
-                href="https://forms.fillout.com/t/vwNtnMQfEcus"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary btn-cta-hero register-pulse"
-              >
-                Register Now
-              </a>
               <a
                 href="#current-speakers"
                 onClick={scrollToSpeakers}
-                className="btn btn-outline btn-cta-hero speakers-btn"
+                className="btn btn-primary btn-cta-hero speakers-btn"
               >
                 Meet the 2026 Speakers
+              </a>
+              <a 
+                href="/past-seasons"
+                className="btn btn-outline btn-cta-hero"
+              >
+                Past Seasons
               </a>
             </div>
           </motion.div>
